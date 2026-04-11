@@ -78,7 +78,7 @@ GET /api/classify?name=John
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/BakoJoseph/genderize-api.git
    cd genderize-api
    ```
 
