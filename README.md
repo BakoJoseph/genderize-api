@@ -4,7 +4,7 @@ A Flask-based REST API that integrates with the Genderize.io service to predict 
 
 ## 🚀 Live URL
 
-*(To be deployed)*
+https://genderize-api-production-32f6.up.railway
 
 ## 📌 API Endpoint
 
