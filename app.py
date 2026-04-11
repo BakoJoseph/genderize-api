@@ -11,6 +11,13 @@ def apply_cors(response):
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
+@app.route('/')
+def home():
+    return jsonify({
+        "status": "success",
+        "message": "API is running"
+    })
+
 @app.route('/api/classify', methods=['GET'])
 def classify_name():
     name = request.args.get('name')
@@ -65,7 +72,7 @@ def classify_name():
                 'probability': data.get('probability'),
                 'sample_size': data.get('count'),
                 'is_confident': is_confident,
-                'processed_time': processed_time
+                'processed_at': processed_time
             }
         }), 200
     except Exception:
