@@ -61,7 +61,7 @@ def classify_name():
         # Confidence logic
         is_confident = (
             probability is not None and 
-            count is not None
+            count is not None and 
             probability >= 0.7 and 
             count >= 100
         )
