@@ -59,7 +59,12 @@ def classify_name():
             }), 422
         
         # Confidence logic
-        is_confident = probability >= 0.7 and count >= 100
+        is_confident = (
+            probability is not None and 
+            count is not None
+            probability >= 0.7 and 
+            count >= 100
+        )
         
         # Processes time (UTC ISO 8601 format)
         processed_time = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
